@@ -1,0 +1,9 @@
+version: '3.2'
+services:
+  springboot:
+    image: my-server2:0.0.1-SNAPSHOT
+    hostname: my-server2
+    environment:
+      - SPRING_PROFILES_ACTIVE=${SPRING_PROFILES_ACTIVE:-debug}
+    ports:
+      - "9989:9080"
